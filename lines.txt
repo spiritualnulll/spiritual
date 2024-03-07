@@ -1,0 +1,980 @@
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Successfully built bs4 svglib aiohttp multidict
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
+Collecting discord.py==1.5.1 (from -r FireBot-master/requirements.txt (line 1))
+  Using cached discord.py-1.5.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython==1.16.0 (from -r FireBot-master/requirements.txt (line 2))
+  Using cached dnspython-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting PyNaCl==1.3.0 (from -r FireBot-master/requirements.txt (line 3))
+  Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting async-timeout==3.0.1 (from -r FireBot-master/requirements.txt (line 4))
+  Using cached async_timeout-3.0.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting httpx==0.16.* (from -r FireBot-master/requirements.txt (line 5))
+  Using cached httpx-0.16.1-py3-none-any.whl.metadata (38 kB)
+Collecting bs4==0.0.1 (from -r FireBot-master/requirements.txt (line 6))
+  Using cached bs4-0.0.1-py3-none-any.whl
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.29.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting markdown (from -r FireBot-master/requirements.txt (line 8))
+  Using cached Markdown-3.5.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting jishaku (from -r FireBot-master/requirements.txt (line 9))
+  Using cached jishaku-2.5.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: requests in ./.local/lib/python3.11/site-packages (from -r FireBot-master/requirements.txt (line 10)) (2.31.0)
+Collecting python-chess (from -r FireBot-master/requirements.txt (line 11))
+  Using cached python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting svglib (from -r FireBot-master/requirements.txt (line 12))
+  Using cached svglib-1.5.1-py3-none-any.whl
+Collecting aiohttp<3.7.0,>=3.6.0 (from discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached aiohttp-3.6.3-py3-none-any.whl
+Collecting six (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.4.1 (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: certifi in ./.local/lib/python3.11/site-packages (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5)) (2024.2.2)
+Collecting sniffio (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore==0.12.* (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached httpcore-0.12.3-py3-none-any.whl.metadata (10 kB)
+Collecting beautifulsoup4 (from bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting h11==0.* (from httpcore==0.12.*->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+INFO: pip is looking at multiple versions of asyncpg to determine which version is compatible with other requirements. This could take a while.
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+Collecting braceexpand>=0.1.7 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached braceexpand-0.1.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting click>=8.0.1 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting import-expression<2.0.0,>=1.0.0 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached import_expression-1.1.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (2.2.1)
+Collecting chess<2,>=1 (from python-chess->-r FireBot-master/requirements.txt (line 11))
+  Using cached chess-1.10.0-py3-none-any.whl.metadata (19 kB)
+Collecting reportlab (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached reportlab-4.1.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting tinycss2>=0.6.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.2.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: attrs>=17.3.0 in ./.local/lib/python3.11/site-packages (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1)) (23.2.0)
+Collecting chardet<4.0,>=2.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting multidict<5.0,>=4.5 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached multidict-4.7.6-cp311-cp311-linux_x86_64.whl
+Collecting yarl<1.6.0,>=1.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached yarl-1.5.1.tar.gz (173 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycparser (from cffi>=1.4.1->PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting webencodings (from cssselect2>=0.2.0->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting astunparse<2.0.0,>=1.6.3 (from import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pillow>=9.0.0 (from reportlab->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse<2.0.0,>=1.6.3->import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9)) (0.42.0)
+Using cached discord.py-1.5.1-py3-none-any.whl (701 kB)
+Using cached dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759 kB)
+Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Using cached httpx-0.16.1-py3-none-any.whl (65 kB)
+Using cached httpcore-0.12.3-py3-none-any.whl (55 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+Using cached Markdown-3.5.2-py3-none-any.whl (103 kB)
+Using cached jishaku-2.5.2-py3-none-any.whl (76 kB)
+Using cached python_chess-1.999-py3-none-any.whl (1.4 kB)
+Using cached braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+Using cached chess-1.10.0-py3-none-any.whl (154 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Using cached import_expression-1.1.4-py3-none-any.whl (22 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.1 MB)
+Using cached reportlab-4.1.0-py3-none-any.whl (1.9 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: yarl
+  Building wheel for yarl (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for yarl (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      **********************
+      * Accellerated build *
+      **********************
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-311
+      creating build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_url.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_py.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/__init__.py -> build/lib.linux-x86_64-cpython-311/yarl
+      running egg_info
+      writing yarl.egg-info/PKG-INFO
+      writing dependency_links to yarl.egg-info/dependency_links.txt
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
+Collecting discord.py==1.5.1 (from -r FireBot-master/requirements.txt (line 1))
+  Using cached discord.py-1.5.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython==1.16.0 (from -r FireBot-master/requirements.txt (line 2))
+  Using cached dnspython-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting PyNaCl==1.3.0 (from -r FireBot-master/requirements.txt (line 3))
+  Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting async-timeout==3.0.1 (from -r FireBot-master/requirements.txt (line 4))
+  Using cached async_timeout-3.0.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting httpx==0.16.* (from -r FireBot-master/requirements.txt (line 5))
+  Using cached httpx-0.16.1-py3-none-any.whl.metadata (38 kB)
+Collecting bs4==0.0.1 (from -r FireBot-master/requirements.txt (line 6))
+  Using cached bs4-0.0.1-py3-none-any.whl
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.29.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting markdown (from -r FireBot-master/requirements.txt (line 8))
+  Using cached Markdown-3.5.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting jishaku (from -r FireBot-master/requirements.txt (line 9))
+  Using cached jishaku-2.5.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: requests in ./.local/lib/python3.11/site-packages (from -r FireBot-master/requirements.txt (line 10)) (2.31.0)
+Collecting python-chess (from -r FireBot-master/requirements.txt (line 11))
+  Using cached python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting svglib (from -r FireBot-master/requirements.txt (line 12))
+  Using cached svglib-1.5.1-py3-none-any.whl
+Collecting aiohttp<3.7.0,>=3.6.0 (from discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached aiohttp-3.6.3-py3-none-any.whl
+Collecting six (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.4.1 (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: certifi in ./.local/lib/python3.11/site-packages (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5)) (2024.2.2)
+Collecting sniffio (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore==0.12.* (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached httpcore-0.12.3-py3-none-any.whl.metadata (10 kB)
+Collecting beautifulsoup4 (from bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting h11==0.* (from httpcore==0.12.*->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+INFO: pip is looking at multiple versions of asyncpg to determine which version is compatible with other requirements. This could take a while.
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+Collecting braceexpand>=0.1.7 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached braceexpand-0.1.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting click>=8.0.1 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting import-expression<2.0.0,>=1.0.0 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached import_expression-1.1.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (2.2.1)
+Collecting chess<2,>=1 (from python-chess->-r FireBot-master/requirements.txt (line 11))
+  Using cached chess-1.10.0-py3-none-any.whl.metadata (19 kB)
+Collecting reportlab (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached reportlab-4.1.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting tinycss2>=0.6.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.2.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: attrs>=17.3.0 in ./.local/lib/python3.11/site-packages (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1)) (23.2.0)
+Collecting chardet<4.0,>=2.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting multidict<5.0,>=4.5 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached multidict-4.7.6-cp311-cp311-linux_x86_64.whl
+Collecting yarl<1.6.0,>=1.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached yarl-1.5.1.tar.gz (173 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycparser (from cffi>=1.4.1->PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting webencodings (from cssselect2>=0.2.0->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting astunparse<2.0.0,>=1.6.3 (from import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pillow>=9.0.0 (from reportlab->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse<2.0.0,>=1.6.3->import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9)) (0.42.0)
+Using cached discord.py-1.5.1-py3-none-any.whl (701 kB)
+Using cached dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759 kB)
+Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Using cached httpx-0.16.1-py3-none-any.whl (65 kB)
+Using cached httpcore-0.12.3-py3-none-any.whl (55 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+Using cached Markdown-3.5.2-py3-none-any.whl (103 kB)
+Using cached jishaku-2.5.2-py3-none-any.whl (76 kB)
+Using cached python_chess-1.999-py3-none-any.whl (1.4 kB)
+Using cached braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+Using cached chess-1.10.0-py3-none-any.whl (154 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Using cached import_expression-1.1.4-py3-none-any.whl (22 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.1 MB)
+Using cached reportlab-4.1.0-py3-none-any.whl (1.9 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: yarl
+  Building wheel for yarl (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for yarl (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      **********************
+      * Accellerated build *
+      **********************
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-311
+      creating build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_url.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_py.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/__init__.py -> build/lib.linux-x86_64-cpython-311/yarl
+      running egg_info
+      writing yarl.egg-info/PKG-INFO
+      writing dependency_links to yarl.egg-info/dependency_links.txt
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
+Collecting discord.py==1.5.1 (from -r FireBot-master/requirements.txt (line 1))
+  Using cached discord.py-1.5.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython==1.16.0 (from -r FireBot-master/requirements.txt (line 2))
+  Using cached dnspython-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting PyNaCl==1.3.0 (from -r FireBot-master/requirements.txt (line 3))
+  Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting async-timeout==3.0.1 (from -r FireBot-master/requirements.txt (line 4))
+  Using cached async_timeout-3.0.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting httpx==0.16.* (from -r FireBot-master/requirements.txt (line 5))
+  Using cached httpx-0.16.1-py3-none-any.whl.metadata (38 kB)
+Collecting bs4==0.0.1 (from -r FireBot-master/requirements.txt (line 6))
+  Using cached bs4-0.0.1-py3-none-any.whl
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.29.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting markdown (from -r FireBot-master/requirements.txt (line 8))
+  Using cached Markdown-3.5.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting jishaku (from -r FireBot-master/requirements.txt (line 9))
+  Using cached jishaku-2.5.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: requests in ./.local/lib/python3.11/site-packages (from -r FireBot-master/requirements.txt (line 10)) (2.31.0)
+Collecting python-chess (from -r FireBot-master/requirements.txt (line 11))
+  Using cached python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting svglib (from -r FireBot-master/requirements.txt (line 12))
+  Using cached svglib-1.5.1-py3-none-any.whl
+Collecting aiohttp<3.7.0,>=3.6.0 (from discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached aiohttp-3.6.3-py3-none-any.whl
+Collecting six (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.4.1 (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: certifi in ./.local/lib/python3.11/site-packages (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5)) (2024.2.2)
+Collecting sniffio (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore==0.12.* (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached httpcore-0.12.3-py3-none-any.whl.metadata (10 kB)
+Collecting beautifulsoup4 (from bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting h11==0.* (from httpcore==0.12.*->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+INFO: pip is looking at multiple versions of asyncpg to determine which version is compatible with other requirements. This could take a while.
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+Collecting braceexpand>=0.1.7 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached braceexpand-0.1.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting click>=8.0.1 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting import-expression<2.0.0,>=1.0.0 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached import_expression-1.1.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (2.2.1)
+Collecting chess<2,>=1 (from python-chess->-r FireBot-master/requirements.txt (line 11))
+  Using cached chess-1.10.0-py3-none-any.whl.metadata (19 kB)
+Collecting reportlab (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached reportlab-4.1.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting tinycss2>=0.6.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.2.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: attrs>=17.3.0 in ./.local/lib/python3.11/site-packages (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1)) (23.2.0)
+Collecting chardet<4.0,>=2.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting multidict<5.0,>=4.5 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached multidict-4.7.6-cp311-cp311-linux_x86_64.whl
+Collecting yarl<1.6.0,>=1.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached yarl-1.5.1.tar.gz (173 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycparser (from cffi>=1.4.1->PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting webencodings (from cssselect2>=0.2.0->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting astunparse<2.0.0,>=1.6.3 (from import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pillow>=9.0.0 (from reportlab->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse<2.0.0,>=1.6.3->import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9)) (0.42.0)
+Using cached discord.py-1.5.1-py3-none-any.whl (701 kB)
+Using cached dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759 kB)
+Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Using cached httpx-0.16.1-py3-none-any.whl (65 kB)
+Using cached httpcore-0.12.3-py3-none-any.whl (55 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+Using cached Markdown-3.5.2-py3-none-any.whl (103 kB)
+Using cached jishaku-2.5.2-py3-none-any.whl (76 kB)
+Using cached python_chess-1.999-py3-none-any.whl (1.4 kB)
+Using cached braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+Using cached chess-1.10.0-py3-none-any.whl (154 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Using cached import_expression-1.1.4-py3-none-any.whl (22 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.1 MB)
+Using cached reportlab-4.1.0-py3-none-any.whl (1.9 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: yarl
+  Building wheel for yarl (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for yarl (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      **********************
+      * Accellerated build *
+      **********************
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-311
+      creating build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_url.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_py.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/__init__.py -> build/lib.linux-x86_64-cpython-311/yarl
+      running egg_info
+      writing yarl.egg-info/PKG-INFO
+      writing dependency_links to yarl.egg-info/dependency_links.txt
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
+Collecting discord.py==1.5.1 (from -r FireBot-master/requirements.txt (line 1))
+  Using cached discord.py-1.5.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython==1.16.0 (from -r FireBot-master/requirements.txt (line 2))
+  Using cached dnspython-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting PyNaCl==1.3.0 (from -r FireBot-master/requirements.txt (line 3))
+  Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting async-timeout==3.0.1 (from -r FireBot-master/requirements.txt (line 4))
+  Using cached async_timeout-3.0.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting httpx==0.16.* (from -r FireBot-master/requirements.txt (line 5))
+  Using cached httpx-0.16.1-py3-none-any.whl.metadata (38 kB)
+Collecting bs4==0.0.1 (from -r FireBot-master/requirements.txt (line 6))
+  Using cached bs4-0.0.1-py3-none-any.whl
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.29.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting markdown (from -r FireBot-master/requirements.txt (line 8))
+  Using cached Markdown-3.5.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting jishaku (from -r FireBot-master/requirements.txt (line 9))
+  Using cached jishaku-2.5.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: requests in ./.local/lib/python3.11/site-packages (from -r FireBot-master/requirements.txt (line 10)) (2.31.0)
+Collecting python-chess (from -r FireBot-master/requirements.txt (line 11))
+  Using cached python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting svglib (from -r FireBot-master/requirements.txt (line 12))
+  Using cached svglib-1.5.1-py3-none-any.whl
+Collecting aiohttp<3.7.0,>=3.6.0 (from discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached aiohttp-3.6.3-py3-none-any.whl
+Collecting six (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.4.1 (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: certifi in ./.local/lib/python3.11/site-packages (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5)) (2024.2.2)
+Collecting sniffio (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore==0.12.* (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached httpcore-0.12.3-py3-none-any.whl.metadata (10 kB)
+Collecting beautifulsoup4 (from bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting h11==0.* (from httpcore==0.12.*->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+INFO: pip is looking at multiple versions of asyncpg to determine which version is compatible with other requirements. This could take a while.
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+Collecting braceexpand>=0.1.7 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached braceexpand-0.1.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting click>=8.0.1 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting import-expression<2.0.0,>=1.0.0 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached import_expression-1.1.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (2.2.1)
+Collecting chess<2,>=1 (from python-chess->-r FireBot-master/requirements.txt (line 11))
+  Using cached chess-1.10.0-py3-none-any.whl.metadata (19 kB)
+Collecting reportlab (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached reportlab-4.1.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting tinycss2>=0.6.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.2.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: attrs>=17.3.0 in ./.local/lib/python3.11/site-packages (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1)) (23.2.0)
+Collecting chardet<4.0,>=2.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting multidict<5.0,>=4.5 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached multidict-4.7.6-cp311-cp311-linux_x86_64.whl
+Collecting yarl<1.6.0,>=1.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached yarl-1.5.1.tar.gz (173 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycparser (from cffi>=1.4.1->PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting webencodings (from cssselect2>=0.2.0->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting astunparse<2.0.0,>=1.6.3 (from import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pillow>=9.0.0 (from reportlab->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse<2.0.0,>=1.6.3->import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9)) (0.42.0)
+Using cached discord.py-1.5.1-py3-none-any.whl (701 kB)
+Using cached dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759 kB)
+Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Using cached httpx-0.16.1-py3-none-any.whl (65 kB)
+Using cached httpcore-0.12.3-py3-none-any.whl (55 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+Using cached Markdown-3.5.2-py3-none-any.whl (103 kB)
+Using cached jishaku-2.5.2-py3-none-any.whl (76 kB)
+Using cached python_chess-1.999-py3-none-any.whl (1.4 kB)
+Using cached braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+Using cached chess-1.10.0-py3-none-any.whl (154 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Using cached import_expression-1.1.4-py3-none-any.whl (22 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.1 MB)
+Using cached reportlab-4.1.0-py3-none-any.whl (1.9 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: yarl
+  Building wheel for yarl (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for yarl (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      **********************
+      * Accellerated build *
+      **********************
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-311
+      creating build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_url.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_py.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/__init__.py -> build/lib.linux-x86_64-cpython-311/yarl
+      running egg_info
+      writing yarl.egg-info/PKG-INFO
+      writing dependency_links to yarl.egg-info/dependency_links.txt
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
+Collecting discord.py==1.5.1 (from -r FireBot-master/requirements.txt (line 1))
+  Using cached discord.py-1.5.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting dnspython==1.16.0 (from -r FireBot-master/requirements.txt (line 2))
+  Using cached dnspython-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting PyNaCl==1.3.0 (from -r FireBot-master/requirements.txt (line 3))
+  Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting async-timeout==3.0.1 (from -r FireBot-master/requirements.txt (line 4))
+  Using cached async_timeout-3.0.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting httpx==0.16.* (from -r FireBot-master/requirements.txt (line 5))
+  Using cached httpx-0.16.1-py3-none-any.whl.metadata (38 kB)
+Collecting bs4==0.0.1 (from -r FireBot-master/requirements.txt (line 6))
+  Using cached bs4-0.0.1-py3-none-any.whl
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.29.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+Collecting markdown (from -r FireBot-master/requirements.txt (line 8))
+  Using cached Markdown-3.5.2-py3-none-any.whl.metadata (7.0 kB)
+Collecting jishaku (from -r FireBot-master/requirements.txt (line 9))
+  Using cached jishaku-2.5.2-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: requests in ./.local/lib/python3.11/site-packages (from -r FireBot-master/requirements.txt (line 10)) (2.31.0)
+Collecting python-chess (from -r FireBot-master/requirements.txt (line 11))
+  Using cached python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting svglib (from -r FireBot-master/requirements.txt (line 12))
+  Using cached svglib-1.5.1-py3-none-any.whl
+Collecting aiohttp<3.7.0,>=3.6.0 (from discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached aiohttp-3.6.3-py3-none-any.whl
+Collecting six (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.4.1 (from PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: certifi in ./.local/lib/python3.11/site-packages (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5)) (2024.2.2)
+Collecting sniffio (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting rfc3986<2,>=1.3 (from rfc3986[idna2008]<2,>=1.3->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting httpcore==0.12.* (from httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached httpcore-0.12.3-py3-none-any.whl.metadata (10 kB)
+Collecting beautifulsoup4 (from bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting h11==0.* (from httpcore==0.12.*->httpx==0.16.*->-r FireBot-master/requirements.txt (line 5))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+INFO: pip is looking at multiple versions of asyncpg to determine which version is compatible with other requirements. This could take a while.
+Collecting asyncpg (from -r FireBot-master/requirements.txt (line 7))
+  Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+Collecting braceexpand>=0.1.7 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached braceexpand-0.1.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting click>=8.0.1 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting import-expression<2.0.0,>=1.0.0 (from jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached import_expression-1.1.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.local/lib/python3.11/site-packages (from requests->-r FireBot-master/requirements.txt (line 10)) (2.2.1)
+Collecting chess<2,>=1 (from python-chess->-r FireBot-master/requirements.txt (line 11))
+  Using cached chess-1.10.0-py3-none-any.whl.metadata (19 kB)
+Collecting reportlab (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached reportlab-4.1.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+Collecting tinycss2>=0.6.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cssselect2>=0.2.0 (from svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: attrs>=17.3.0 in ./.local/lib/python3.11/site-packages (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1)) (23.2.0)
+Collecting chardet<4.0,>=2.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached chardet-3.0.4-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting multidict<5.0,>=4.5 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached multidict-4.7.6-cp311-cp311-linux_x86_64.whl
+Collecting yarl<1.6.0,>=1.0 (from aiohttp<3.7.0,>=3.6.0->discord.py==1.5.1->-r FireBot-master/requirements.txt (line 1))
+  Using cached yarl-1.5.1.tar.gz (173 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycparser (from cffi>=1.4.1->PyNaCl==1.3.0->-r FireBot-master/requirements.txt (line 3))
+  Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+Collecting webencodings (from cssselect2>=0.2.0->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting astunparse<2.0.0,>=1.6.3 (from import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->bs4==0.0.1->-r FireBot-master/requirements.txt (line 6))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pillow>=9.0.0 (from reportlab->svglib->-r FireBot-master/requirements.txt (line 12))
+  Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse<2.0.0,>=1.6.3->import-expression<2.0.0,>=1.0.0->jishaku->-r FireBot-master/requirements.txt (line 9)) (0.42.0)
+Using cached discord.py-1.5.1-py3-none-any.whl (701 kB)
+Using cached dnspython-1.16.0-py2.py3-none-any.whl (188 kB)
+Using cached PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759 kB)
+Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Using cached httpx-0.16.1-py3-none-any.whl (65 kB)
+Using cached httpcore-0.12.3-py3-none-any.whl (55 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached asyncpg-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+Using cached Markdown-3.5.2-py3-none-any.whl (103 kB)
+Using cached jishaku-2.5.2-py3-none-any.whl (76 kB)
+Using cached python_chess-1.999-py3-none-any.whl (1.4 kB)
+Using cached braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Using cached cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+Using cached chess-1.10.0-py3-none-any.whl (154 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Using cached import_expression-1.1.4-py3-none-any.whl (22 kB)
+Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached lxml-5.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.1 MB)
+Using cached reportlab-4.1.0-py3-none-any.whl (1.9 MB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Using cached pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Building wheels for collected packages: yarl
+  Building wheel for yarl (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for yarl (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [43 lines of output]
+      **********************
+      * Accellerated build *
+      **********************
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-311
+      creating build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_url.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_py.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting.py -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/__init__.py -> build/lib.linux-x86_64-cpython-311/yarl
+      running egg_info
+      writing yarl.egg-info/PKG-INFO
+      writing dependency_links to yarl.egg-info/dependency_links.txt
+      writing requirements to yarl.egg-info/requires.txt
+      writing top-level names to yarl.egg-info/top_level.txt
+      reading manifest file 'yarl.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+      warning: no previously-included files matching '*.cache' found anywhere in distribution
+      warning: no previously-included files found matching 'yarl/*.html'
+      warning: no previously-included files found matching 'yarl/*.so'
+      warning: no previously-included files found matching 'yarl/*.pyd'
+      no previously-included directories found matching 'docs/_build'
+      adding license file 'LICENSE'
+      writing manifest file 'yarl.egg-info/SOURCES.txt'
+      copying yarl/__init__.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.c -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyi -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/_quoting_c.pyx -> build/lib.linux-x86_64-cpython-311/yarl
+      copying yarl/py.typed -> build/lib.linux-x86_64-cpython-311/yarl
+      running build_ext
+      building 'yarl._quoting_c' extension
+      creating build/temp.linux-x86_64-cpython-311
+      creating build/temp.linux-x86_64-cpython-311/yarl
+      gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c yarl/_quoting_c.c -o build/temp.linux-x86_64-cpython-311/yarl/_quoting_c.o
+      yarl/_quoting_c.c:196:12: fatal error: longintrepr.h: No such file or directory
+        196 |   #include "longintrepr.h"
+            |            ^~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/gcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for yarl
+Failed to build yarl
+ERROR: Could not build wheels for yarl, which is required to install pyproject.toml-based projects
+Traceback (most recent call last):
+  File "/home/container/FireBot-master/main.py", line 3, in <module>
+    import asyncpg
+ModuleNotFoundError: No module named 'asyncpg'
+Pylex~ Server marked as offline...
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+Pylex~ Server marked as starting...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.11.8
+:/home/container$ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then git pull; fi; if [[ ! -z "${PY_PACKAGES}" ]]; then pip install -U --prefix .local ${PY_PACKAGES}; fi; if [[ -f /home/container/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; /usr/local/bin/python /home/container/${PY_FILE}
